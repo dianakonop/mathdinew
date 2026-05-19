@@ -4,9 +4,9 @@ import type { PageKey } from "../types";
 import "./ContactsPage.css";
 
 const contacts = [
-  { name: "Telegram", icon: "/telegram.png", link: "https://t.me/xrxtg", label: "XRXTG" },
-  { name: "TikTok", icon: "/tiktok.png", link: "https://www.tiktok.com/@dianakonop", label: "dianakonop" },
-  { name: "Phone", icon: "/phone.png", link: "tel:+380978564875", label: "+380978564875" },
+  { name: "Telegram", icon: "/telegram.png", link: "https://", label: "-" },
+  { name: "TikTok", icon: "/tiktok.png", link: "https://www.tiktok.com/@", label: "-" },
+  { name: "Phone", icon: "/phone.png", link: "tel:+", label: "+380978564875" },
 ];
 
 type ContactsPageProps = {
@@ -93,11 +93,11 @@ const ContactsPage: React.FC<ContactsPageProps> = ({ onNavigate, activePage }) =
   onClose={() => setMenuOpen(false)}
   activePage={activePage}
   onNavigate={(page) => {
-    if (page !== activePage) {  // перевіряємо, чи змінився пункт
+    if (page !== activePage) {  
       onNavigate(page);
       setMenuOpen(false);
     }
-    // якщо той же пункт, меню залишиться відкритим
+    
   }}
 />
     </>

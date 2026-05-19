@@ -23,7 +23,7 @@ export default function MainScreen({ onLoginClick, onRegisterClick }: MainScreen
       {/* Telegram + TikTok */}
 <div className="absolute top-4 right-4 flex space-x-3 z-20">
   <a
-    href="https://t.me/xrxtg"
+    href="https://t.me/"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -34,7 +34,7 @@ export default function MainScreen({ onLoginClick, onRegisterClick }: MainScreen
     />
   </a>
   <a
-    href="https://www.tiktok.com/@dianakonop"
+    href="https://www.tiktok.com/@"
     target="_blank"
     rel="noopener noreferrer"
   >

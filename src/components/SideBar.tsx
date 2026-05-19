@@ -58,7 +58,7 @@ export default function Sidebar({
         {/* Соцмережі */}
         <div className="flex space-x-4">
           <a
-            href="https://t.me/xrxtg"
+            href="https://t.me/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform duration-300 hover:scale-125"
@@ -66,7 +66,7 @@ export default function Sidebar({
             <img src="/telegram.png" alt="Telegram" className="w-8 h-8" />
           </a>
           <a
-            href="https://www.tiktok.com/@dianakonop?_t=ZM-8x5UJuU4hzK&_r=1"
+            href="https:"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform duration-300 hover:scale-125"
