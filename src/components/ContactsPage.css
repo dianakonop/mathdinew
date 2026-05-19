@@ -1,0 +1,138 @@
+/* ContactsPage.css */
+
+/* Білий фон */
+.background-container {
+  position: fixed;
+  inset: 0;
+  background: white;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Контейнер з обома картинками */
+.rotating-images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  animation: rotate 30s linear infinite;
+}
+
+/* Кожна картинка */
+.rotating-images img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+}
+
+/* Розташування PNG по колу */
+.rotating-images img:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rotating-images img:nth-child(2) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Анімація */
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+
+/* Контейнер для центрованої картки */
+.centered-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.contact-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 32px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  user-select: none;
+  max-width: 400px;
+  width: 100%;
+  font-family: 'Chewy', cursive, sans-serif;
+  text-align: center;
+}
+.contacts-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-shadow: 2px 2px 0 black;
+  color: black;
+}
+.contacts-header .highlight {
+  font-style: italic;
+  font-weight: 900;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 900;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #b5d54f;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.contact-item:last-child {
+  border-bottom: none;
+}
+.contact-item:hover {
+  background-color: #fde7ff;
+}
+.contact-item.active {
+  background-color: #ffccff;
+}
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.contact-label {
+  flex-grow: 1;
+  text-align: left;
+  color: black;
+  text-shadow: 1px 1px 1px #ccc;
+}
+/* Бургер кнопка */
+.burger-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 50;
+  cursor: pointer;
+  padding: 10px 14px;
+  background: #d2e6b5cc;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+.burger-button:hover {
+  transform: scale(1.1);
+  background: #b5d54fcc;
+}
+.burger-bar {
+  width: 32px;
+  height: 4px;
+  background: black;
+  border-radius: 2px;
+  margin: 5px 0;
+}

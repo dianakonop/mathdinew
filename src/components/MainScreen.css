@@ -1,0 +1,34 @@
+/* Анімація для бігової стрічки */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+/* Динамічніша пульсація/зумування */
+@keyframes zoomBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-zoom-bounce {
+  animation: zoomBounce 5s ease-in-out infinite;
+}
